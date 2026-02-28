@@ -51,12 +51,25 @@ def transform_to_silver(df: pd.DataFrame) -> pd.DataFrame:
     mask = df['order_amount'].isna() | (df['order_amount']==0)
     df.loc[mask, 'order_amount'] = (df.loc[mask, 'quantity'] * df.loc[mask, 'unit_price'])
 
-    # parse order_date with multiple formats
-    df['order_date'] = pd.to_datetime(df['order_date'], errors='coerce', dayfirst=False)
-    # try dayfirst for entries not parsed
-    bad_dates = df['order_date'].isna()
-    if bad_dates.any():
-        df.loc[bad_dates, 'order_date'] = pd.to_datetime(df.loc[bad_dates, 'order_date'].astype(str), errors='coerce', dayfirst=True)
+    # parse order_date with multiple formats robustly
+    if 'order_date' in df.columns:
+        # keep original raw strings, strip whitespace and normalize separators
+        raw_dates = df['order_date'].astype(str).str.strip()
+        raw_dates = raw_dates.replace({'nan': None, 'None': None})
+        raw_dates = raw_dates.str.replace('/', '-', regex=False)
+        # normalize unusual whitespace and collapse multiple spaces
+        raw_dates = raw_dates.str.replace(r'[\u3000\u00A0]', ' ', regex=True)
+        raw_dates = raw_dates.str.replace(r'\s+', ' ', regex=True).str.strip()
+
+        # try parsing with year-first / common ISO formats first
+        parsed = pd.to_datetime(raw_dates, errors='coerce', dayfirst=False)
+
+        # for remaining unparsable rows, try day-first interpretation
+        bad = parsed.isna()
+        if bad.any():
+            parsed.loc[bad] = pd.to_datetime(raw_dates[bad].astype(str), errors='coerce', dayfirst=True)
+
+        df['order_date'] = parsed
 
     # drop duplicates and reset index
     df = df.drop_duplicates(subset=['order_id']).reset_index(drop=True)
