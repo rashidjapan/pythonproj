@@ -10,10 +10,9 @@ def main() -> None:
     if np is None:
         print("numpy is not installed. install with 'pip install numpy'")
         return
-    a = np.arange(10)
+    a = np.arange(10,20,30)
     print("array:", a)
     print("mean:", a.mean())
-    print("reshape 2x5:\n", a.reshape((2, 5)))
 
 
 if __name__ == "__main__":
