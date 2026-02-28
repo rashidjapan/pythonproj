@@ -1,0 +1,21 @@
+order_id,customer_id,customer_name,product_id,product_name,category,quantity,unit_price,order_amount,order_date,region,payment_method
+1001,101,Alice Johnson,P001,Laptop,Electronics,1,1200.00,1200.00,2026-01-05,North,Credit Card
+1002,102,Bob Smith,P002,Mouse,Electronics,2,25.00,50.00,2026-01-06,South,Debit Card
+1003,103,Charlie Brown,P003,Desk Chair,Furniture,1,300.00,300.00,2026-01-07,East,Credit Card
+1004,101,Alice Johnson,P004,Monitor,Electronics,2,350.00,700.00,2026-01-10,North,PayPal
+1005,104,Diana Prince,P005,Keyboard,Electronics,1,80.00,80.00,2026-01-12,West,Credit Card
+1006,102,Bob Smith,P006,Desk Lamp,Furniture,3,45.00,135.00,2026-01-14,South,Debit Card
+1007,105,Eve Wilson,P007,Office Desk,Furniture,1,600.00,600.00,2026-01-15,East,Credit Card
+1008,103,Charlie Brown,P008,Notebook,Stationery,10,5.00,50.00,2026-01-16,East,Cash
+1009,101,Alice Johnson,P009,Pen Set,Stationery,5,15.00,75.00,2026-01-18,North,Credit Card
+1010,104,Diana Prince,P010,Monitor Stand,Furniture,1,60.00,60.00,2026-01-20,West,Debit Card
+1011,106,Frank Miller,P001,Laptop,Electronics,1,1200.00,1200.00,2026-01-22,North,Credit Card
+1012,105,Eve Wilson,P002,Mouse,Electronics,4,25.00,100.00,2026-01-23,East,PayPal
+1013,102,Bob Smith,P003,Desk Chair,Furniture,2,300.00,600.00,2026-01-25,South,Credit Card
+1014,107,Grace Lee,P004,Monitor,Electronics,1,350.00,350.00,2026-01-26,West,Debit Card
+1015,103,Charlie Brown,P005,Keyboard,Electronics,2,80.00,160.00,2026-01-28,East,Credit Card
+1016,101,Alice Johnson,P006,Desk Lamp,Furniture,2,45.00,90.00,2026-02-01,North,Cash
+1017,104,Diana Prince,P007,Office Desk,Furniture,1,600.00,600.00,2026-02-03,West,Credit Card
+1018,106,Frank Miller,P008,Notebook,Stationery,20,5.00,100.00,2026-02-05,North,Debit Card
+1019,105,Eve Wilson,P009,Pen Set,Stationery,3,15.00,45.00,2026-02-07,East,Credit Card
+1020,102,Bob Smith,P010,Monitor Stand,Furniture,2,60.00,120.00,2026-02-10,South,PayPal
