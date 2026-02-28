@@ -1,0 +1,11 @@
+order_id,customer_id,customer_name,product_id,product_name,category,quantity,unit_price,order_amount,order_date,region,payment_method
+1001,101, Alice Johnson ,P001,Laptop,Electronics,1,1200.00,1200.00,2026-01-05,North,Credit Card
+1002,102,Bob Smith,P002,Mouse,Electronics,2,25,50,2026-01-06,South,Debit Card
+1003,103,Charlie Brown,P003,Desk Chair,Furniture,1,300.00,300.00,2026-01-07,East,Credit Card
+1004,101,Alice Johnson,P004,Monitor,Electronics,2,350.00,700.00,2026/01/10,North,PayPal
+1005,104,Diana Prince,P005,Keyboard,Electronics,one,80.00,80.00,2026-01-12,West,Credit Card
+1006,102,Bob Smith,P006,Desk Lamp,Furniture,3,45.00,,2026-01-14,South,Debit Card
+1007,105,Eve Wilson,P007,Office Desk,Furniture,1,600,600,2026-01-15,East,Credit Card
+1008,103,Charlie Brown,P008,Notebook,Stationery,10,5.00,50.00,16-01-2026,East,Cash
+1009,101,Alice Johnson,P009,Pen Set,Stationery,5,15.00,75.00,2026-01-18,North,Credit Card
+1010,104,Diana Prince,P010,Monitor Stand,Furniture,1,60.00,60.00,2026-01-20,West,Debit Card

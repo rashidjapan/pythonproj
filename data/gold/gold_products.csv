@@ -1,0 +1,11 @@
+product_id,product_name,category,order_amount
+P001,Laptop,Electronics,1200.0
+P004,Monitor,Electronics,700.0
+P007,Office Desk,Furniture,600.0
+P003,Desk Chair,Furniture,300.0
+P006,Desk Lamp,Furniture,135.0
+P005,Keyboard,Electronics,80.0
+P009,Pen Set,Stationery,75.0
+P010,Monitor Stand,Furniture,60.0
+P002,Mouse,Electronics,50.0
+P008,Notebook,Stationery,50.0
