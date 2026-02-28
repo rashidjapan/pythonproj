@@ -1,0 +1,4 @@
+# Add learning dependencies here, e.g.:
+# numpy
+# pandas
+# jupyter
