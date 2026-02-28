@@ -1,4 +1,4 @@
-# sqlpro
+# usingsql
 
 Sample project demonstrating Medallion architecture using SQL (SQLite).
 
@@ -10,22 +10,27 @@ Structure:
 ## Getting started
 
 ```powershell
-cd sqlpro
+cd src/usingsql
 python etl.py   # will create or overwrite orders.db and run pipeline
 sqlite3 orders.db  # open DB for manual queries
 ```
 
 ### Viewing bronze data
 
-After running the ETL you can inspect the raw bronze table in several ways:
+The raw bronze rows are stored inside the SQLite database file `orders.db`,
+in a table called `bronze_orders`.  You can query this table directly from the
+command line or with the provided helper script.
 
 ```powershell
-# using sqlite3 command-line
+# using sqlite3 command-line (from the usingsql folder):
 sqlite3 orders.db "SELECT * FROM bronze_orders;"
 
-# using the helper script
+# or run the Python helper which prints the path and rows:
 python scripts/show_bronze.py
 ```
+
+Both approaches execute the SQL statement `SELECT * FROM bronze_orders` so you
+can see every record retained in the bronze layer.
 
 Bronze data is stored in the `bronze_orders` table inside `orders.db`.
 
